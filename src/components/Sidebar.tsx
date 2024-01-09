@@ -3,7 +3,7 @@ import { FaChevronDown } from "react-icons/fa6";
 
 function Sidebar() {
   return (
-    <div className="w-56 h-screen gap-6 flex flex-col items-center bg-[#1E2640] py-4 px-2.5 mr-auto">
+    <div className="w-56 h-screen gap-6 sticky inset-0 flex flex-col items-center bg-[#1E2640] py-4 px-2.5">
       <AccountInfo />
       <div className="w-full gap-1 flex flex-col">
         <Tab link="./images/icons/home.svg" title="Home" />
