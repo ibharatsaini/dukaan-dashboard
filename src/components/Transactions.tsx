@@ -74,7 +74,7 @@ const TransactionsTable = () => {
           })
           .map(({ orderId, date, orderAmount, tnxfees }: orderDetails) => {
             return (
-              <div className="px-3">
+              <div key={orderId} className="px-3">
               <tr className="flex  gap-10 justify-between py-3.5  border-b-2 border-gray-100 border-content inline-block">
                 <td className=" text-left w-full text-[#146EB4] text-sm font-medium leading-5 ">
                   {orderId}
