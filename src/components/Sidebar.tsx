@@ -12,23 +12,25 @@ function Sidebar() {
         <Tab link="./images/icons/delivery.svg" title="Delivery" />
         <Tab link="./images/icons/marketing.svg" title="Marketing" />
         <Tab link="./images/icons/analytic.svg" title="Analytics" />
-        <Tab link="./images/icons/payment.svg" title="Payments" />
+        <Tab link="./images/icons/payment.svg" title="Payments" active={true} />
         <Tab link="./images/icons/tool.svg" title="Tools" />
         <Tab link="./images/icons/discounts.svg" title="Discounts" />
         <Tab link="./images/icons/audience.svg" title="Audience" />
         <Tab link="./images/icons/appearance.svg" title="Appearance" />
         <Tab link="./images/icons/plugins.svg" title="Plugins" />
       </div>
-      <div className="w-48 h-[54px] px-3 py-1.5 bg-slate-700 rounded flex gap-3 items-center">
+      <div className="w-48 h-[54px] px-3 py-1.5 bg-slate-700 rounded flex gap-3 mt-auto items-center">
         <div className="w-9 h-9 bg-white p-1.5 rounded bg-opacity-10">
-
-            <img src={"./images/icons/wallet.svg"} className=""/>
+          <img src={"./images/icons/wallet.svg"} className="" />
         </div>
         <div className="flex gap-0.5 flex-col">
-            <span className="text-sm font-normal leading-none text-white opacity-80">Available Credits</span>
-            <h3 className="text-white text-base font-medium leading-normal">222.10</h3>
+          <span className="text-sm font-normal leading-none text-white opacity-80">
+            Available Credits
+          </span>
+          <h3 className="text-white text-base font-medium leading-normal">
+            222.10
+          </h3>
         </div>
-        
       </div>
     </div>
   );
@@ -58,13 +60,19 @@ const Tab = ({
   link,
   title,
   href,
+  active,
 }: {
   link: string;
   title: string;
   href?: string;
+  active?: boolean;
 }) => {
   return (
-    <div className="w-full h-9 px-4 py-2 flex items-center gap-4 cursor-pointer">
+    <div
+      className={`w-full h-9 px-4 py-2 flex items-center gap-4 cursor-pointer ${
+        active && "bg-[#353C53] rounded"
+      }`}
+    >
       <img src={link} className="h-5 w-5" />
       <Link
         href={href ?? ""}
@@ -75,7 +83,5 @@ const Tab = ({
     </div>
   );
 };
-
-
 
 export default Sidebar;
