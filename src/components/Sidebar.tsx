@@ -45,8 +45,9 @@ const AccountInfo = () => {
           Nishyan
         </h3>
         <Link
-          href=""
-          className="text-sm opacity-80 text-white text-sm font-normal underline leading-none"
+          href="https://github.com/ibharatsaini/dukaan-dashboard"
+
+          className="text-sm opacity-80 text-white text-sm font-normal border-b leading-none"
         >
           Visit Store
         </Link>
