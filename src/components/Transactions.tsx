@@ -123,7 +123,7 @@ const Pagination = () => {
 
         {Array.from({ length: 8 }, (_, index) => index + 11).map((el) => {
           return (
-            <div className="w-7 h-7 py-0.5 rounded flex-col justify-center items-center gap-2 inline-flex">
+            <div key={el} className="w-7 h-7 py-0.5 rounded flex-col justify-center items-center gap-2 inline-flex">
               <div className="self-stretch text-center text-neutral-600 text-sm font-normal font-['Inter'] leading-tight">
                 {el}
               </div>
