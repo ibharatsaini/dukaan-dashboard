@@ -74,7 +74,7 @@ const TransactionsTable = () => {
           })
           .map(({ orderId, date, orderAmount, tnxfees }: orderDetails) => {
             return (
-              <tr className="flex  gap-10 justify-between px-3 py-3.5  border-b-2 border-gray-100 border-content inline-block">
+              <tr key={orderId} className="flex  gap-10 justify-between px-3 py-3.5  border-b-2 border-gray-100 border-content inline-block">
                 <td className=" text-left w-full text-[#146EB4] text-sm font-medium leading-5 ">
                   {orderId}
                 </td>
@@ -121,7 +121,7 @@ const Pagination = () => {
 
         {Array.from({ length: 8 }, (_, index) => index + 11).map((el) => {
           return (
-            <div className="w-7 h-7 py-0.5 rounded flex-col justify-center items-center gap-2 inline-flex">
+            <div key={el} className="w-7 h-7 py-0.5 rounded flex-col justify-center items-center gap-2 inline-flex">
               <div className="self-stretch text-center text-neutral-600 text-sm font-normal font-['Inter'] leading-tight">
                 {el}
               </div>
